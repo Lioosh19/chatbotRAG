@@ -1,0 +1,17 @@
+# Environment variables
+.env
+.env.local
+
+# WhatsApp Web Session & Auth
+.wwebjs_auth/
+.wwebjs_cache/
+
+# Dependencies
+node_modules/
+
+# Vercel Build Output
+.vercel/
+
+# OS files
+.DS_Store
+Thumbs.db

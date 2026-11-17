@@ -1,0 +1,43 @@
+{
+  "keywords": {
+    "jam buka": "jam buka",
+    "jam operasional": "jam buka",
+    "jadwal operasional": "jam buka",
+    "buka jam berapa": "jam buka",
+    "alamat toko": "alamat",
+    "lokasi toko": "alamat",
+    "gudang pengiriman": "alamat",
+    "cara pemesanan": "cara pesan",
+    "cara belanja": "cara pesan",
+    "order shopee": "cara pesan",
+    "link shopee": "shopee",
+    "official shopee": "shopee",
+    "toko shopee": "shopee",
+    "kontak admin": "kontak",
+    "nomor wa": "kontak",
+    "whatsapp admin": "kontak",
+    "biaya ongkir": "pengiriman",
+    "ekspedisi pengiriman": "pengiriman",
+    "jasa kirim": "pengiriman",
+    "size chart": "ukuran",
+    "panduan ukuran": "ukuran",
+    "tabel ukuran": "ukuran",
+    "detail bahan": "bahan",
+    "jenis bahan": "bahan",
+    "kain apa": "bahan",
+    "tukar ukuran": "garansi",
+    "retur barang": "garansi",
+    "garansi produk": "garansi"
+  },
+  "responses": {
+    "jam buka": "Lapak Shopee MyBasic aktif 24 jam nonstop untuk order otomatis. Jadwal proses dan pengiriman pesanan dilakukan Senin - Sabtu pukul 09.00 - 17.00 WIB (Hari Minggu dan libur nasional tidak ada pengiriman).",
+    "alamat": "Gudang utama MyBasic berlokasi di Kota Bandung, Jawa Barat. Seluruh pesanan dikirim langsung dari gudang pusat kami dengan standar pengemasan aman berlapis.",
+    "cara pesan": "Pemesanan dapat dilakukan langsung di etalase Shopee resmi kami untuk menikmati promo voucher gratis ongkir dan diskon toko, atau hubungi admin WhatsApp jika membutuhkan bantuan pemesanan massal.",
+    "shopee": "Kunjungi toko resmi Shopee kami untuk melihat voucher flash sale dan diskon toko hari ini: https://shopee.co.id/mybasic",
+    "pengiriman": "Pengiriman didukung oleh SPX Express, J&T, SiCepat, JNE, dan Anteraja. Pembayaran sebelum pukul 15.00 WIB akan dikirim pada hari yang sama!",
+    "ukuran": "📏 *Panduan Size Chart MyBasic (Lebar Dada x Panjang Baju):*\n• *S:* 48 cm x 68 cm\n• *M:* 52 cm x 70 cm\n• *L:* 56 cm x 73 cm\n• *XL:* 60 cm x 76 cm\n• *XXL:* 64 cm x 78 cm\n• *3XL:* 68 cm x 80 cm\n*(Toleransi ukuran jahitan: 1–2 cm). Saran: Untuk gaya santai/oversized, disarankan naik 1 size dari ukuran biasanya.*",
+    "bahan": "🧵 *Spesifikasi Bahan Resmi MyBasic:*\n• *Cotton Combed 20s (Heavyweight 200 GSM++):* Karakter bahan tebal, kokoh, tidak menerawang, serat padat, dan awet dicuci berkali-kali (digunakan pada seri Boxy Tee & Oversized).\n• *Cotton Combed 24s (200 GSM):* Ketebalan pas, adem, sangat menyerap keringat, dan nyaman untuk pakaian harian.\n• *Cotton Combed 30s (Soft Touch):* Ringan, ekstra lembut di kulit, dan jatuh dengan rapi.\n• *Airy BreezeWear (Quick Dry Tech):* Bahan poliester/katun berteknologi cepat kering, anti-kusut, dan sangat sejuk untuk cuaca panas atau aktivitas outdoor.\n• *Cotton Pique & Danbowl DoubleLock:* Digunakan khusus seri Polo Shirt untuk tekstur berpori elegan dan kerah rajut anti melar.",
+    "garansi": "🛡️ *Garansi Kepuasan Pelanggan MyBasic:*\n1. *Garansi Tukar Size:* Bisa tukar ukuran maksimal 3 hari setelah barang diterima jika kekecilan/kebesaran (syarat: tag label masih utuh dan belum dicuci).\n2. *Garansi Cacat Produksi:* Ganti baru 100% dan gratis ongkir retur jika ditemukan reject atau kesalahan kirim dari pihak kami.",
+    "kontak": "📞 *Informasi Kontak Resmi Lapak MyBasic:*\n• *Lapak Shopee:* MyBasic Official Store (shopee.co.id/mybasic)\n• *WhatsApp Admin:* Silakan klik tombol 'Chat Admin WhatsApp' pada katalog website kami\n• *Jam Layanan Chat:* Setiap hari pukul 08.00 - 21.00 WIB"
+  }
+}

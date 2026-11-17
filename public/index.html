@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyBasic Official Store - Shopee Catalog & AI Assistant</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Top Announcement Bar -->
+  <header class="top-bar">
+    <div class="container top-bar-content">
+      <span>🛍️ <strong>Katalog Resmi MyBasic Shopee</strong> | Garansi Tukar Size & Pengiriman Cepat</span>
+      <a href="https://shopee.co.id/mybasic" target="_blank" id="shopeeTopLink" class="badge-link">Kunjungi Shopee Mall ↗</a>
+    </div>
+  </header>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container nav-content">
+      <div class="brand">
+        <div class="brand-logo">👕</div>
+        <div>
+          <h1 class="brand-name" id="storeTitle">MyBasic</h1>
+          <p class="brand-tagline">Official Shopee Store & Essential Apparel</p>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <a href="#katalog" class="nav-btn">Katalog Produk</a>
+        <button id="openChatBtn" class="nav-btn-highlight">
+          <span class="icon">💬</span> Tanya AI Asisten
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Gateway WhatsApp Lokal Panel (Aktif saat server lokal berjalan) -->
+  <section id="gatewayBanner" class="gateway-banner hidden">
+    <div class="container gateway-content">
+      <div class="gateway-badge">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="statusText">WhatsApp Bot Offline</span>
+        <span id="botNumberBadge" class="hidden" style="margin-left: 6px; font-weight: normal;">(Nomor: <strong id="botNumberText">085779479672</strong>)</span>
+      </div>
+      <div class="gateway-controls">
+        <button id="startBtn" class="btn-gateway">Mulai Bot & Scan QR</button>
+        <button id="stopBtn" class="btn-gateway danger hidden">Hentikan Bot</button>
+        <button id="resetBtn" class="btn-gateway danger" title="Hapus sesi WA / logout">Reset Sesi</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section QR Code WhatsApp -->
+  <section id="qrSection" class="hidden">
+    <div id="qrModalSection">
+      <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:8px;">
+        <h3 style="font-size:16px; font-weight:800; color:#0f172a;">📱 Pindai QR Code WhatsApp</h3>
+        <button id="closeQrBtn" type="button" style="background:none; border:none; font-size:18px; cursor:pointer; color:#64748b; padding:4px;">✕</button>
+      </div>
+      <p style="font-size:13px; color:#64748b; margin-bottom:14px; line-height:1.4;">
+        Buka WhatsApp di HP Anda &rarr; Menu titik tiga / Pengaturan &rarr; <em>Perangkat Tertaut</em> &rarr; <em>Tautkan Perangkat</em>, lalu scan QR di bawah ini (nomor yang melakukan scan otomatis menjadi bot aktif):
+      </p>
+      <div id="qrcode">
+        <div style="padding:24px 16px; color:#64748b; font-size:13px; background:#f8fafc; border-radius:8px; border:1px dashed #cbd5e1;">
+          <div class="qr-spinner" style="margin: 0 auto 12px auto;"></div>
+          <em>Sedang membuka engine WhatsApp & menyiapkan QR Code... (Memerlukan 15-30 detik)</em>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <span class="pill-tag">✨ Toko Terverifikasi Shopee Official</span>
+        <h2>Daily Basics & Streetwear Pilihan Terbaik</h2>
+        <p>Temukan koleksi kaos polos combed, oversized tee, polo, hoodie, dan celana chino berkualitas tinggi. Konsultasikan rekomendasi size & bahan langsung dengan AI Chatbot RAG 24 jam.</p>
+        <div class="hero-ctas">
+          <a href="#katalog" class="btn btn-primary">Lihat Koleksi Produk</a>
+          <a id="heroWaBtn" href="#" target="_blank" class="btn btn-secondary">
+            <span>🟢</span> Chat Admin WhatsApp
+          </a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Cotton Combed Premium</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">4.9/5</div>
+          <div class="stat-label">Rating Penjualan Shopee</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">Smart AI Chatbot Response</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Filter & Catalog Section -->
+  <main class="container" id="katalog">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Katalog Produk Lapak MyBasic</h2>
+        <p class="section-subtitle">Data produk sinkron langsung dari etalase Shopee.</p>
+      </div>
+      <div class="filter-group">
+        <button class="filter-btn active" data-category="all">Semua (66 Produk)</button>
+        <button class="filter-btn" data-category="Kaos">Kaos Reguler</button>
+        <button class="filter-btn" data-category="Polo">Polo Shirt</button>
+        <button class="filter-btn" data-category="Longsleeve">Lengan Panjang</button>
+        <button class="filter-btn" data-category="Boxy">Boxy & Oversized</button>
+        <button class="filter-btn" data-category="Fitted">Fitted Tee</button>
+        <button class="filter-btn" data-category="Singlet">Singlet / Gym</button>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="productGrid" class="product-grid">
+      <div class="loading-state">Memuat katalog produk MyBasic...</div>
+    </div>
+  </main>
+
+  <!-- Floating RAG Chat Widget -->
+  <div class="chat-widget-wrapper">
+    <button id="chatToggleBtn" class="chat-toggle-btn" aria-label="Buka Chat AI">
+      <span class="chat-icon-open">💬</span>
+      <span class="chat-icon-close">✕</span>
+      <span class="chat-badge-pulse"></span>
+    </button>
+
+    <div id="chatBox" class="chat-box hidden">
+      <div class="chat-header">
+        <div class="chat-header-info">
+          <div class="avatar">🤖</div>
+          <div>
+            <h3>MyBasic AI Consultant</h3>
+            <p><span class="online-dot"></span> Online | RAG Smart Mode</p>
+          </div>
+        </div>
+        <button id="closeChatBtn" class="btn-close-chat">✕</button>
+      </div>
+
+      <div class="chat-tags-wrapper">
+        <button type="button" id="tagNavLeft" class="btn-tag-nav" title="Geser ke kiri" aria-label="Geser ke kiri">&#8249;</button>
+        <div class="chat-quick-tags" id="quickTagsTrack">
+          <span class="quick-tag" data-msg="Ada kaos oversized apa saja dan harganya berapa?">👕 Kaos Oversize</span>
+          <span class="quick-tag" data-msg="Koleksi polo shirt ada apa saja dan berapa harganya?">👔 Polo Shirt</span>
+          <span class="quick-tag" data-msg="Berapa panduan ukuran size chart dan bahan kaosnya?">📏 Size Chart & Bahan</span>
+          <span class="quick-tag" data-msg="Koleksi kaos lengan panjang longsleeve ada apa saja?">🧥 Longsleeve</span>
+          <span class="quick-tag" data-msg="Bagaimana cara pesan dan berapa lama pengirimannya?">🚚 Pengiriman & Retur</span>
+          <span class="quick-tag" data-msg="Ada celana santai atau celana chino apa saja?">👖 Celana</span>
+        </div>
+        <button type="button" id="tagNavRight" class="btn-tag-nav" title="Geser ke kanan" aria-label="Geser ke kanan">&#8250;</button>
+      </div>
+
+      <div id="chatMessages" class="chat-messages">
+        <div class="msg msg-bot">
+          <div class="msg-bubble">
+            Halo! Saya asisten virtual toko *MyBasic Official*. Mau tanya seputar produk kaos, polo, hoodie, rekomendasi ukuran, atau stok lapak Shopee? Silakan tanyakan langsung ya! 😊
+          </div>
+        </div>
+      </div>
+
+      <form id="chatForm" class="chat-input-row">
+        <input type="text" id="chatInput" placeholder="Tanyakan seputar produk, ukuran, atau harga..." autocomplete="off" required />
+        <button type="submit" id="sendBtn" class="btn-send">
+          <span>Kirim</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p>© 2026 MyBasic Official Store - Penugasan Praktikum AI Chatbot RAG via WA</p>
+      <div class="footer-links">
+        <a href="#katalog">Katalog</a>
+        <a href="https://shopee.co.id/mybasic" target="_blank">Lapak Shopee</a>
+        <a id="footerWaLink" href="#" target="_blank">WhatsApp Admin</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
