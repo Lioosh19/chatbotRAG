@@ -1,6 +1,4 @@
 {
-  "version": 2,
-  "public": false,
   "rewrites": [
     {
       "source": "/api/chat",
@@ -9,6 +7,10 @@
     {
       "source": "/api/products",
       "destination": "/api/products.js"
+    },
+    {
+      "source": "/",
+      "destination": "/public/index.html"
     },
     {
       "source": "/(.*)",
